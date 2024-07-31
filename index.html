@@ -77,8 +77,8 @@
                      <p>Your browser doesn't support HTML5 canvas.</p>
             </canvas>
         </div>
-        <!-- Android crash fix -->
-        <script>window.Telegram = {WebView : {receiveEvent : (params) => {null}}}</script>
+        <!-- Android and ios crash fix -->
+        <script>window.Telegram = {WebView : {receiveEvent : (params) => {null}}}; window.TelegramGameProxy={receiveEvent : (params) => {null}}</script>
         <!-- Run the game code -->
         <script type="text/javascript" src="html5game/PixelWarsHTML.js?GLXZB=82766626"></script>
         <script>window.onload = GameMaker_Init;</script>
